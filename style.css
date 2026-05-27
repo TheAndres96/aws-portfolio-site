@@ -15,6 +15,10 @@ body {
   line-height: 1.6;
 }
 
+section {
+  scroll-margin-top: 100px;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -104,6 +108,16 @@ nav a:hover {
   border-radius: 18px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.25);
   animation: fadeUp 0.5s ease;
+}
+
+.card a {
+  color: #f59e0b;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.card a:hover {
+  text-decoration: underline;
 }
 
 @keyframes fadeUp {
