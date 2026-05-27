@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Andres Merlos | Cloud Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" >
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav>
+    <h2>Andres Merlos</h2>
+    <div>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <img src="profile.jpeg" alt="Andres Merlos" class="profile-pic" />
+
+    <h1>Cloud Engineer | Software Developer | ML Enthusiast</h1>
+    <p>
+      AWS Data Center Operations Tech III, Computer Science senior at George Mason University,
+      and accelerated master’s student focused on Machine Learning.
+    </p>
+
+    <div class="buttons">
+      <a href="#projects" class="btn primary">View Projects</a>
+      <a href="resume.txt" class="btn secondary" target="_blank">View Resume</a>
+    </div>
+  </section>
+
+  <section id="about" class="card">
+    <h2>About Me</h2>
+    <p>
+      I’m building my skills in cloud computing, software development, and machine learning.
+      This website is hosted on AWS using S3 and CloudFront.
+    </p>
+  </section>
+
+  <section id="skills" class="card">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <span>AWS</span>
+      <span>S3</span>
+      <span>CloudFront</span>
+      <span>Python</span>
+      <span>Java</span>
+      <span>JavaScript</span>
+      <span>SQL</span>
+      <span>Linux</span>
+      <span>Docker</span>
+      <span>Networking</span>
+    </div>
+  </section>
+
+  <section id="projects" class="card">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3>AWS Portfolio Website</h3>
+      <p>
+        Static portfolio website hosted with Amazon S3 and delivered globally using Amazon CloudFront.
+      </p>
+      <p class="tech">AWS S3 • CloudFront • HTML • CSS</p>
+    </div>
+
+  </section>
+
+  <section class="card">
+    <h2>Certifications</h2>
+    <ul>
+      <li>AWS Cloud Practitioner — In Progress</li>
+      <li>CompTIA A+</li>
+      <li>CompTIA Network+</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Cloud Architecture</h2>
+    <p>This website currently uses:</p>
+    <pre>Browser → Amazon CloudFront → Amazon S3 → Amazon API Gateway → AWS Lambda → Amazon DynamoDB</pre>
+  </section>
+
+  <section id="contact" class="card">
+    <h2>Contact</h2>
+    <p>Email: email@example.com</p>
+    <p>LinkedIn: add-link</p>
+    <p>GitHub: add-link</p>
+  </section>
+
+     <section class="card">
+        <h2>Visitor Counter</h2>
+        <p>
+            This website has been visited
+            <span id="visitor-count">...</span>
+            times.
+        </p>
+    </section>
+
+    <script src="script.js"></script>
+    <footer>
+        <p>Built and hosted on AWS by Andres Merlos.</p>
+    </footer>
+
+</body>
+</html>
