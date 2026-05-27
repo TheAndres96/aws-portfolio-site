@@ -82,9 +82,43 @@
   </section>
 
   <section class="card">
-    <h2>Cloud Architecture</h2>
-    <p>This website currently uses:</p>
-    <pre>Browser → Amazon CloudFront → Amazon S3 → Amazon API Gateway → AWS Lambda → Amazon DynamoDB</pre>
+    <h2>How This Website Works</h2>
+    <p>
+      This portfolio is hosted on AWS using a serverless cloud architecture.
+      The frontend is sotred in Amazon S3, delivered globally throuhg Amazon CloudFront ,
+      and secured with HTTPS using AWS Certificate Manager.
+    </p>
+
+    <pre>
+      User Browser
+          ↓
+      Route 53 DNS
+          ↓
+      CloudFront CDN
+          ↓
+      AWS Certificate Manager HTTPS
+          ↓
+      Amazon S3 Static Website Files
+          ↓
+      Amazon API Gateway
+          ↓
+      AWS Lambda
+          ↓
+      Amazon DynamoDB
+    </pre>
+
+    <p>
+      Route 53 routes my custom domain to CloudFront. CloudFront caches and delivers 
+      the website globally. S3 stores the all files for the website. 
+      API Gateway exposes a backend endpoint for the visitor counter. 
+      Lambda runs the backend Python codemm and DynamoDB stores the visitor count. 
+    </p>
+
+    <p>
+      The project is connected to GitHub Actions, so when I push changes to GitHub, 
+      the workflow automatically uploads the updated files to S3 and invalidates the 
+      CloudFront cache, ensuring visitors see the latest version of the website. 
+    </p>
   </section>
 
   <section id="contact" class="card">
