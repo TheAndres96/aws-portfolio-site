@@ -28,21 +28,26 @@ nav {
   backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
 nav h2 {
   color: #f59e0b;
+  margin: 0;
 }
 
 nav a {
   color: #f8fafc;
   text-decoration: none;
   margin-left: 20px;
+  transition: color 0.2s ease;
 }
 
 nav a:hover {
   color: #38bdf8;
 }
+
+/* ---------------- Hero ---------------- */
 
 .hero {
   text-align: center;
@@ -59,10 +64,11 @@ nav a:hover {
 }
 
 .hero h1 {
-  font-size: 52px;
+  font-size: clamp(34px, 6vw, 52px);
   margin-bottom: 16px;
   color: #f59e0b;
   text-shadow: 0 0 20px rgba(245, 158, 11, 0.5);
+  line-height: 1.15;
 }
 
 .hero p {
@@ -74,20 +80,25 @@ nav a:hover {
 
 .buttons {
   margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
+
+/* ---------------- Buttons ---------------- */
 
 .btn {
   display: inline-block;
   padding: 14px 26px;
   border-radius: 12px;
-  margin: 8px;
   text-decoration: none;
   font-weight: bold;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
 }
 
 .btn:hover {
-  transform: scale(1.05);
+  transform: translateY(-3px);
 }
 
 .primary {
@@ -100,6 +111,8 @@ nav a:hover {
   color: #38bdf8;
 }
 
+/* ---------------- Cards ---------------- */
+
 .card {
   max-width: 950px;
   margin: 30px auto;
@@ -108,6 +121,11 @@ nav a:hover {
   border-radius: 18px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.25);
   animation: fadeUp 0.5s ease;
+}
+
+.card h2 {
+  color: #38bdf8;
+  margin-top: 0;
 }
 
 .card a {
@@ -120,21 +138,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.card h2 {
-  color: #38bdf8;
-  margin-top: 0;
-}
+/* ---------------- Skills ---------------- */
 
 .skills-grid {
   display: grid;
@@ -155,6 +159,8 @@ nav a:hover {
   background: #1e293b;
   transform: translateY(-3px);
 }
+
+/* ---------------- Projects ---------------- */
 
 .project {
   background: #0f172a;
@@ -178,6 +184,8 @@ nav a:hover {
   font-weight: bold;
 }
 
+/* ---------------- Code Blocks ---------------- */
+
 pre {
   background: #020617;
   padding: 18px;
@@ -186,8 +194,111 @@ pre {
   color: #f59e0b;
 }
 
+/* ---------------- Footer ---------------- */
+
 footer {
   text-align: center;
   padding: 30px;
   color: #94a3b8;
+}
+
+/* ---------------- Animation ---------------- */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media (max-width: 768px) {
+
+  nav {
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px 6%;
+    text-align: center;
+  }
+
+  nav a {
+    margin: 0 10px;
+    font-size: 15px;
+  }
+
+  .hero {
+    padding: 60px 6%;
+  }
+
+  .profile-pic {
+    width: 155px;
+    height: 155px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .card {
+    margin: 20px 6%;
+    padding: 28px;
+  }
+}
+
+/* ===========================
+   Phones
+=========================== */
+
+@media (max-width: 480px) {
+
+  .hero {
+    padding: 45px 5%;
+  }
+
+  .profile-pic {
+    width: 130px;
+    height: 130px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 6px;
+    font-size: 14px;
+  }
+
+  .card {
+    margin: 18px 4%;
+    padding: 20px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
